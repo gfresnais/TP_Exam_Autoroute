@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class CompagnieAutorouteTest {
     @Test
-    void testObtenirTarifExacte() {
+    public void testObtenirTarifExacte() {
         CompagnieAutoroute compagnieAutoroute = new CompagnieAutoroute();
         Route r2 = new Route();
         Porte pA = new PorteEntree(10), pB = new PorteSortie(20), pC = new PorteSortie(30), pD = new PorteSortie(40);
@@ -29,7 +29,7 @@ public class CompagnieAutorouteTest {
     }
 
     @Test
-    void testObtenirTarifCalculé() {
+    public void testObtenirTarifCalcule() {
         CompagnieAutoroute compagnieAutoroute = new CompagnieAutoroute();
         Route r1 = new Route();
         Porte p1 = new PorteEntree(1), p2 = new PorteSortie(2), p3 = new PorteEntree(3), p4 = new PorteSortie(4);

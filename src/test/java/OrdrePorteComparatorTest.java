@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class OrdrePorteComparatorTest {
     @Test
-    void testCompare() {
+    public void testCompare() {
         List<Porte> list = new ArrayList<>();
         Porte p1 = new PorteEntree(1), p2 = new PorteSortie(2), p3 = new PorteEntree(3), p4 = new PorteSortie(4);
 

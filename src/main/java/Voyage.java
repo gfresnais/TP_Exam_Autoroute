@@ -36,6 +36,6 @@ public class Voyage {
     }
 
     public BigDecimal getTarif() {
-        return BigDecimal.valueOf(0);
+        return autoroute.obtenirTarif(entree, sortie);
     }
 }

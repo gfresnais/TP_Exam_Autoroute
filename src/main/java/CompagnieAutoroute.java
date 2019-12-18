@@ -21,6 +21,25 @@ public class CompagnieAutoroute {
 
     private Tarif getTarifCalcule(Porte p1, Porte p2) {
         Tarif tarif = new Tarif(p1, p2, BigDecimal.valueOf(0));
+        for (Route r:
+             routes) {
+            for (Porte p:
+                 r.portes) {
+                Tarif t = getTarifExacte(p, p2);
+                if( t != null )
+                    tarif.setPrix(t.getPrix().add(tarif.getPrix()));
+                t = getTarifExacte(p1, p);
+                if( t != null )
+                    tarif.setPrix(t.getPrix().add(tarif.getPrix()));
+            }
+        }
+        /* Retourne le bon résultat lors du test mais uniquement dans ce cas de test
+        for (Tarif t:
+             tarifs) {
+            BigDecimal prix = t.getPrix();
+            tarif.setPrix(tarif.getPrix().add(prix));
+        }
+        */
         return tarif;
     }
 
